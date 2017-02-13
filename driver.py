@@ -78,6 +78,11 @@ if __name__ == "__main__":
 
 
     #NATHAN save file CODE GOES HERE
+file = open("PlayerShipSave.txt","w")
+
+file.write("SAVE INFO GOES HERE")
+
+file.close()
 
 
 #countdown
