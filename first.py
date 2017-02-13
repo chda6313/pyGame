@@ -1,4 +1,4 @@
-def __main__:
+def __main__():
     print("hi ethan")
     print("jk hi nathan")
 
