@@ -84,7 +84,7 @@ if __name__ == "__main__":
 	#NATHAN save file CODE GOES HERE
 	file = open("PlayerShipSave.txt","w")
 
-	file.write(str(PlayerShip.fuel))
+	file.write("fuel ="str(PlayerShip.fuel))
 
 	file.close()
 
