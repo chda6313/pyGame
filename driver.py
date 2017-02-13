@@ -76,6 +76,10 @@ if __name__ == "__main__":
 	print(PlayerShip.money)
 
 
+	#this is an example of how to call a method from an external source
+	import first
+	first.printinfo()
+
 
     #NATHAN save file CODE GOES HERE
 file = open("PlayerShipSave.txt","w")
