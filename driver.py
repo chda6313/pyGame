@@ -84,9 +84,24 @@ if __name__ == "__main__":
 	#NATHAN save file CODE GOES HERE
 	file = open("PlayerShipSave.txt","w")
 
-	file.write("fuel ="str(PlayerShip.fuel))
+	file.write(str(PlayerShip.fuel))
+	file.write(str(PlayerShip.armor))
+	file.write(str(PlayerShip.engines))
+	file.write(str(PlayerShip.weapons))
+	file.write(str(PlayerShip.lifeSupport))
+	file.write(str(PlayerShip.crewSize))
+	file.write(str(PlayerShip.Size))
+	file.write(str(PlayerShip.crewMembers))
+	file.write(str(PlayerShip.shields))
+	file.write(str(PlayerShip.speed))
+	file.write(str(PlayerShip.turning))
+	file.write(str(PlayerShip.money))
 
 	file.close()
+
+	file = open("PlayerShipSave.txt", "r")
+
+	print (file.read())
 
 
 #countdown
