@@ -22,7 +22,7 @@ class ship():
 		self.shields = 1
 		self.speed = 1
 		self.turning = 1
-		self.money = 0
+		self.money = 50
 
 
 class levelMap():
@@ -41,6 +41,44 @@ class crewMate():
 		self.health = 1
 		self.armor = 1
 		self.energy = 1
+
+
+
+
+
+
+
+
+
+if __name__ == "__main__":
+	#make a new ship with name playership
+	PlayerShip = ship()
+
+	#check how much money we have
+	print(PlayerShip.money)
+
+	#cheat and add some more money
+	PlayerShip.money += 500
+
+	#check again:
+
+
+	#make an enemy ship
+	e1 = ship()
+	#give it some loot
+	e1.money = 200
+
+	#when the player kills the ship and loots we should have a function that does:
+	PlayerShip.money += e1.money
+	e1.money = 0
+
+	#we should have made some money, lets check:
+	print(PlayerShip.money)
+
+
+
+    #NATHAN save file CODE GOES HERE
+
 
 #countdown
 #upgrade screen
