@@ -1,2 +1,2 @@
 # pyGame
-# I'm Nathan and I'm a feggit
+# I'm Nathan and I'm a cool guy
