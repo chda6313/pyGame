@@ -1,5 +1,6 @@
-print("hi ethan")
-print("jk hi nathan")
+def __main__():
+    print("hi ethan")
+    print("jk hi nathan")
 
 
 def printinfo():
