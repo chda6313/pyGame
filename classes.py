@@ -23,6 +23,7 @@ class ship():
 		self.speed = 1
 		self.turning = 1
 		self.money = 50
+		self.name = "Player Name"
 
 
 class levelMap():

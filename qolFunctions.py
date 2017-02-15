@@ -38,9 +38,8 @@ def saveGame(PlayerShip = classes.ship()):
 	#try: savename = PlayerShip.name + "_Save.txt"
 	#note: you might need to implement "self.name" in classes.py > ship() > __init__()
 	
-	
-	file = open("PlayerShipSave.txt","w")
-
+	savename = PlayerShip.name + "_Save.txt"
+	file = open(str(PlayerShip.name) + "_Save.txt","w")
 	file.write(str(PlayerShip.fuel))
 	file.write(str(PlayerShip.armor))
 	file.write(str(PlayerShip.engines))
@@ -53,6 +52,8 @@ def saveGame(PlayerShip = classes.ship()):
 	file.write(str(PlayerShip.speed))
 	file.write(str(PlayerShip.turning))
 	file.write(str(PlayerShip.money))
+	file.write(str(PlayerShip.name))
+
 
 	file.close()
 
