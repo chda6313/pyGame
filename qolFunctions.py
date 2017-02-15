@@ -2,7 +2,7 @@ import os, sys, random, classes
 
 if __name__ == "__main__":
 	#make a new ship with name playership
-	PlayerShip = ship()
+	PlayerShip = classes.ship()
 
 	#check how much money we have
 	print(PlayerShip.money)
@@ -14,7 +14,7 @@ if __name__ == "__main__":
 
 
 	#make an enemy ship
-	e1 = ship()
+	e1 = classes.ship()
 	#give it some loot
 	e1.money = 200
 
@@ -31,7 +31,7 @@ if __name__ == "__main__":
 	first.printinfo()
 
 
-def saveGame(PlayerShip = ship()):
+def saveGame(PlayerShip = classes.ship()):
 	#NATHAN save file CODE GOES HERE
 	
 	#what if we want more than one save?
@@ -65,7 +65,7 @@ def loadGame(shipName):
 	
 	#should create a new ship() with the proper attributes, and spit it out as a return value
 	
-	loadingShip = ship()
+	loadingShip = classes.ship()
 
 	###
 	###
