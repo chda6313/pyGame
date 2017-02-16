@@ -24,37 +24,18 @@ def loadGame():
 	#NATHAN WRITE THIS AS WELL
 	
 	#should create a new ship() with the proper attributes, and spit it out as a return value
-	file = open("Player Name_save.txt","r")
-
+	file = open("Player Name_Save.txt","r")
 	loadingShip = classes.ship()
-	loadingShip.name = file.read(2)
-	loadingShip.fuel = file.read(4)
-	loadingShip.armor = file.read(6)
-	loadingShip.engines = file.read(8)
-	loadingShip.weapons = file.read(10)
-	loadingShip.lifeSupport = file.read(12)
-	loadingShip.crewSize = file.read(14)
-	loadingShip.Size = file.read(16)
-	loadingShip.crewMembers = file.read(18)
-	loadingShip.shields = file.read(20)
-	loadingShip.speed = file.read(22)
-	loadingShip.turning = file.read(24)
-	loadingShip.money = file.read(26)
+	count = 0
+	for e in file:
+			count =+1
+	if count ==2:
+			loadingShip.name = e
+	if count ==4:
+			loadingShip.fuel = e
+
 
 	file.close()
 
 	
-	return loadingShip
-
-def CharlieLoadGame():
-	count = 0
-	loadingShip = classes.ship()
-
-	with open("Player Name_save.txt", "r") as file:
-		#do the following with (read results of our file) as variable "file"
-		for line in file:
-			#for each line in the file:
-			count += 1
-			print('----', count, ':', line)#print line number, and the contents of the line
-
 	return loadingShip

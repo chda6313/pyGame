@@ -1,7 +1,7 @@
 Name: 
 Player Name
 Fuel: 
-0
+100
 Armor: 
 0
 Engines: 
@@ -23,4 +23,4 @@ speed:
 turning: 
 1
 money: 
-500
+50
