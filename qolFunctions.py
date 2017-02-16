@@ -122,12 +122,16 @@ def levelCreator():
 	for line in file:
 		count = count + 1
 		workingTile = line
-		workingTile = [x for x in workingTile.strip()] ###########This is not stripping the way that I want it to
-		#####Need a list so that I can loop through THAT and assign attributes to the tile object
-
-
-
-		tileObject = "Here is where I need a unique completed tile to add to the list"
+		workingTile = [x for x in workingTile.split(' ')]
+		for x in workingTile:
+			tileObject = classes.mapSquare()
+			tileObject.number = x
+			tileObject.terrain = x
+			tileObject.items = x
+			tileObject.altitude = x
+			tileObject.entities = x
+			tileObject.passable = x
+			tileObject.lineBreak = x
 		tileList.append(tileObject)
 		print(workingTile)
 	print(tileList)

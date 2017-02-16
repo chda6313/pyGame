@@ -33,11 +33,11 @@ class levelMap():
 
 class mapSquare():
 	def __init__(self):
-		self.terrain = "dirt"
+		self.terrain = 1
 		self.items = 0
 		self.altitude = 0
 		self.entities = 0
-		self.passable = true
+		self.passable = 1
 
 class crewMate():
 	def __init__(self):
