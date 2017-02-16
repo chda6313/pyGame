@@ -28,11 +28,11 @@ def loadGame():
 	loadingShip = classes.ship()
 	count = 0
 	for e in file:
-			count =+1
+		count = count + 1
 	if count ==2:
-			loadingShip.name = e
+		loadingShip.name = e
 	if count ==4:
-			loadingShip.fuel = e
+		loadingShip.fuel = e
 
 
 	file.close()
