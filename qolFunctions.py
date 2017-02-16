@@ -114,25 +114,26 @@ def femaleNameGen():
 
 	return name.title()
 
-def levelCreator():
-	file = open("Level1.txt", "r")
-	squareAtts = []
-	tileList = []
-	count = 0
-	for line in file:
-		count = count + 1
-		workingTile = line
-		workingTile = [x for x in workingTile.split(' ')]
-		for x in workingTile:
-			tileObject = classes.mapSquare()
-			tileObject.number = x
-			tileObject.terrain = x
-			tileObject.items = x
-			tileObject.altitude = x
-			tileObject.entities = x
-			tileObject.passable = x
-			tileObject.lineBreak = x
-		tileList.append(tileObject)
-		print(workingTile)
-	print(tileList)
+######Nathan tried.
+#def levelCreator():
+	#file = open("Level1.txt", "r")
+	#squareAtts = []
+	#tileList = []
+	#count = 0
+	#for line in file:
+		#count = count + 1
+		#workingTile = line
+		#workingTile = [x for x in workingTile.split(' ')]
+		#for x in workingTile:
+			#tileObject = classes.mapSquare()
+			#tileObject.number = x
+			#tileObject.terrain = x
+			#tileObject.items = x
+			#tileObject.altitude = x
+			#tileObject.entities = x
+			#tileObject.passable = x
+			#tileObject.lineBreak = x
+		#tileList.append(tileObject)
+		#print(workingTile)
+	#print(tileList)
 
