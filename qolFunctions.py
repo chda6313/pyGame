@@ -1,4 +1,4 @@
-import os, sys, random, classes, random, requests, re
+import os, sys, classes, random, requests, re
 from bs4 import BeautifulSoup
 
 def saveGame(PlayerShip = classes.ship()):

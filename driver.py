@@ -26,8 +26,6 @@ def __main__():
 	print("And here is a female one:")
 	print(name,"\n")
 
-#Playing with levelcreator
-	qolFunctions.levelCreator()
 
 
 __main__()
