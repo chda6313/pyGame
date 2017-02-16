@@ -74,6 +74,8 @@ def maleNameGen():
 		file.close()
 ###Holy crap I did it
 ###I think I'll outsource the random name generator
+###Idea for making this work offline:
+###Loop through website like 5,000 times, create a text doc with all results, and delete duplicates
 	if rollthedice == 2:
 		url = "http://www.behindthename.com/random/random.php?number=1&gender=m&surname=&norare=yes&nodiminutives=yes&all=no&usage_eng=1"
 		source_code = requests.get(url)
