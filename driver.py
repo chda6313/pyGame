@@ -7,3 +7,20 @@ def __main__():
 	qolFunctions.saveGame(PlayerShip)
 
 __main__()
+
+
+
+def returnTester(name=-1):
+	mtns = 1
+	plains = 3
+	forest = 90
+
+
+	if name == 'mountain':
+		return mtns
+	elif name == 'plains':
+		return plains
+	elif name == 'forest':
+		return forest
+	else:
+		return None
