@@ -23,4 +23,4 @@ speed:
 turning: 
 1
 money: 
-500
+600

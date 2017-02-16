@@ -5,7 +5,7 @@ def __main__():
 	#make a ship
 	PlayerShip = classes.ship()
 	#it has 500 money
-	PlayerShip.money = 500
+	PlayerShip.money = 600
 	#Let's save that
 	qolFunctions.saveGame(PlayerShip)
 	#Oh no, we lost 200 money
