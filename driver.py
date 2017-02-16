@@ -2,25 +2,17 @@ import os, sys, random, classes, qolFunctions
 
 
 def __main__():
+	#make a ship
 	PlayerShip = classes.ship()
-	PlayerShip.money = 600
+	#it has 500 money
+	PlayerShip.money = 500
+	#Let's save that
 	qolFunctions.saveGame(PlayerShip)
+	#Oh no, we lost 200 money
+	PlayerShip.money = 300
+	#so let's load our last save
+	PlayerShip = qolFunctions.loadGame()
+	#Oh good, it's all here
+	print(str(PlayerShip.money))
 
 __main__()
-
-
-
-def returnTester(name=-1):
-	mtns = 1
-	plains = 3
-	forest = 90
-
-
-	if name == 'mountain':
-		return mtns
-	elif name == 'plains':
-		return plains
-	elif name == 'forest':
-		return forest
-	else:
-		return None

@@ -17,7 +17,7 @@ class ship():
 		self.weapons = {}
 		self.lifeSupport = 1
 		self.crewSize = 1
-		self.Size = 1
+		self.size = 1
 		self.crewMembers = {}#list of crewmates
 		self.shields = 1
 		self.speed = 1
