@@ -24,7 +24,10 @@ def __main__():
 #This will create a random female name
 	name = qolFunctions.femaleNameGen()
 	print("And here is a female one:")
-	print(name)
+	print(name,"\n")
+
+#Playing with levelcreator
+	qolFunctions.levelCreator()
 
 
 __main__()

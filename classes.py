@@ -25,14 +25,19 @@ class ship():
 		self.money = 50
 		self.name = "Player Name"
 
-
 class levelMap():
 	def __init__(self):
-		self.enemies = []
-		self.enemyLocation = []
-		self.objective = []
-		self.vision = []
-		self.traps = {}
+		self.height = 30
+		self.width = 30
+		self.name = "Map Name"
+
+class mapSquare():
+	def __init__(self):
+		self.terrain = "dirt"
+		self.items = 0
+		self.altitude = 0
+		self.entities = 0
+		self.passable = true
 
 class crewMate():
 	def __init__(self):

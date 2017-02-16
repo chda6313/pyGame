@@ -1,0 +1,5 @@
+dimensions
+coordinates
+what kind of terrain it is
+items present
+visual

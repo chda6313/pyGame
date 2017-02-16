@@ -60,7 +60,7 @@ def loadGame():
 	
 	return loadingShip
 
-#####Nathan's Fancy Pantsy Name Generator? Eventually will pick names for different genders, for now it's male only
+#####Nathan's Fancy Pantsy Name Generator
 def maleNameGen():
 	rollthedice = random.randint(1,3)
 	if rollthedice == 1:
@@ -90,7 +90,6 @@ def maleNameGen():
 
 	return name.title()
 
-
 def femaleNameGen():
 	rollthedice = random.randint(1,4)
 	if rollthedice == 1:
@@ -114,4 +113,22 @@ def femaleNameGen():
 			name = re.sub('-1', '', name)
 
 	return name.title()
+
+def levelCreator():
+	file = open("Level1.txt", "r")
+	squareAtts = []
+	tileList = []
+	count = 0
+	for line in file:
+		count = count + 1
+		workingTile = line
+		workingTile = [x for x in workingTile.strip()] ###########This is not stripping the way that I want it to
+		#####Need a list so that I can loop through THAT and assign attributes to the tile object
+
+
+
+		tileObject = "Here is where I need a unique completed tile to add to the list"
+		tileList.append(tileObject)
+		print(workingTile)
+	print(tileList)
 

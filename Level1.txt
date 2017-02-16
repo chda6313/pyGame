@@ -1,0 +1,2 @@
+"dirt",0,0,0,true
+"rock",0,0,0,false
