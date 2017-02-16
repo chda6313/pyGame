@@ -62,9 +62,9 @@ def loadGame():
 
 #####Nathan's Fancy Pantsy Name Generator? Eventually will pick names for different genders, for now it's male only
 def maleNameGen():
-	rollthedice = random.randint(1,2)
+	rollthedice = random.randint(1,3)
 	if rollthedice == 1:
-		#This file is where we can add our own names. Currently, it will pick our choice names half the time.
+		#This file is where we can add our own names. Currently, it will pick our choice names a fifth of the time.
 		file = open("cool_male_names.txt","r")
 		nameList = []
 		for line in file:
@@ -76,7 +76,7 @@ def maleNameGen():
 ###I think I'll outsource the random name generator
 ###Idea for making this work offline:
 ###Loop through website like 5,000 times, create a text doc with all results, and delete duplicates
-	if rollthedice == 2:
+	else:
 		url = "http://www.behindthename.com/random/random.php?number=1&gender=m&surname=&norare=yes&nodiminutives=yes&all=no&usage_eng=1"
 		source_code = requests.get(url)
 		plain_text = source_code.text
@@ -92,7 +92,7 @@ def maleNameGen():
 
 
 def femaleNameGen():
-	rollthedice = random.randint(1,2)
+	rollthedice = random.randint(1,4)
 	if rollthedice == 1:
 		file = open("cool_female_names.txt","r")
 		nameList = []
@@ -101,7 +101,7 @@ def femaleNameGen():
 		name = random.choice(nameList)
 		name = re.sub('\n', '', name)
 		file.close()
-	if rollthedice == 2:
+	else:
 		url = "http://www.behindthename.com/random/random.php?number=1&gender=f&surname=&norare=yes&nodiminutives=yes&all=no&usage_eng=1"
 		source_code = requests.get(url)
 		plain_text = source_code.text
