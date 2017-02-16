@@ -45,3 +45,16 @@ def loadGame():
 
 	
 	return loadingShip
+
+def CharlieLoadGame():
+	count = 0
+	loadingShip = classes.ship()
+
+	with open("Player Name_save.txt", "r") as file:
+		#do the following with (read results of our file) as variable "file"
+		for line in file:
+			#for each line in the file:
+			count += 1
+			print('----', count, ':', line)#print line number, and the contents of the line
+
+	return loadingShip
