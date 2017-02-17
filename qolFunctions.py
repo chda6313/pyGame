@@ -18,12 +18,11 @@ def saveGame(PlayerShip = classes.ship()):
 	file.write("speed: " + "\n" + str(PlayerShip.speed) + "\n")
 	file.write("turning: " + "\n" + str(PlayerShip.turning) + "\n")
 	file.write("money: " + "\n" + str(PlayerShip.money) + "\n")
-
 	file.close()
 
-def loadGame():
+def loadGame(shipToOpen):####Run this like so: qolFunctions.loadGame("savefile.txt")
 
-	file = open("Player Name_Save.txt","r") #########<---------HEY NATHAN NEEDS TO MAKE THIS SUCK LESS STILL
+	file = open(shipToOpen,"r")
 	loadingShip = classes.ship()
 	count = 0
 	for e in file:
@@ -54,10 +53,7 @@ def loadGame():
 			loadingShip.turning = e
 		if count == 26:
 			loadingShip.money = e
-
 	file.close()
-
-	
 	return loadingShip
 
 #####Nathan's Fancy Pantsy Name Generator
@@ -72,8 +68,6 @@ def maleNameGen():
 		name = random.choice(nameList)
 		name = re.sub('\n', '', name)
 		file.close()
-###Holy crap I did it
-###I think I'll outsource the random name generator
 ###Idea for making this work offline:
 ###Loop through website like 5,000 times, create a text doc with all results, and delete duplicates
 	else:
@@ -87,7 +81,6 @@ def maleNameGen():
 			name = re.sub('/name/', '', name)
 			name = re.sub('-2', '', name)
 			name = re.sub('-1', '', name)
-
 	return name.title()
 
 def femaleNameGen():
@@ -112,16 +105,15 @@ def femaleNameGen():
 			name = re.sub('/name/', '', name)
 			name = re.sub('-', '', name)
 			name = re.sub('2', '', name)
-
 	return name.title()
 
-def levelCreator():
-	file = open("Level1.txt", "r")
+def levelCreator(mapToOpen):
+	file = open(mapToOpen, "r")
 	vertCount = -1
+	mapRows = []
 	for line in file:
 		vertCount = vertCount + 1
 		rowSquares = []
-		mapRows = []
 		workingTile = line
 		workingTile = [x for x in workingTile.split(' ')]
 		horizCount = -1
@@ -129,30 +121,24 @@ def levelCreator():
 			horizCount = horizCount + 1
 			if x == '0':
 				workingSquare = classes.mapSquare()
-				workingSquare.terrain = "void"
+				workingSquare.terrain = "path"
 				workingSquare.coordinates = [horizCount,vertCount]
 				rowSquares.append(workingSquare)
 			if x == '1':
-				rowSquares.append(classes.mapSquare())
 				workingSquare = classes.mapSquare()
-				workingSquare.terrain = "rocks"
+				workingSquare.terrain = "wall"
 				workingSquare.coordinates = [horizCount,vertCount]
+				workingSquare.passable = ()
 				rowSquares.append(workingSquare)
 			if x == '2':
-				rowSquares.append(classes.mapSquare())
-				workingSquare = classes.mapSquare()
-				workingSquare.terrain = "trees"
-				workingSquare.coordinates = [horizCount,vertCount]
-				rowSquares.append(workingSquare)
-			if x == '3':
-				rowSquares.append(classes.mapSquare())
 				workingSquare = classes.mapSquare()
 				workingSquare.terrain = "water"
 				workingSquare.coordinates = [horizCount,vertCount]
 				rowSquares.append(workingSquare)
-			mapRows.append(rowSquares)
-	for lists in mapRows:
-		print(lists) ############Why does this print 9 lists of 16 instead of 6 lists of 8?
-
-
+			if x == '3':
+				workingSquare = classes.mapSquare()
+				workingSquare.terrain = "spawn"
+				workingSquare.coordinates = [horizCount,vertCount]
+				rowSquares.append(workingSquare)
+		mapRows.append(rowSquares)
 	file.close()

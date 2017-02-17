@@ -11,7 +11,7 @@ def __main__():
 #play game
 	PlayerShip.fuel = 0
 #load save file
-	PlayerShip = qolFunctions.loadGame()
+	PlayerShip = qolFunctions.loadGame("Player Name_Save.txt")
 #did it work?
 	print(PlayerShip.fuel)
 
@@ -28,7 +28,7 @@ def __main__():
 
 
 #Playing with levelCreator
-	qolFunctions.levelCreator()
+	qolFunctions.levelCreator("Level1.txt")
 
 
 
