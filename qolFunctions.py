@@ -137,3 +137,21 @@ def femaleNameGen():
 		#print(workingTile)
 	#print(tileList)
 
+def levelCreator():
+	file = open("Level1.txt", "r")
+	for line in file:
+		row = []
+		workingTile = line
+		workingTile = [x for x in workingTile.split(' ')]
+		for x in workingTile:
+			if x == '0':
+				row.append('_____')
+			if x == '1':
+				row.append('rocks')
+			if x == '2':
+				row.append('trees')
+			if x == '3':
+				row.append('water')
+		print(row)
+
+	file.close()

@@ -27,5 +27,9 @@ def __main__():
 	print(name,"\n")
 
 
+#Playing with levelCreator
+	qolFunctions.levelCreator()
+
+
 
 __main__()
