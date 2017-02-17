@@ -144,6 +144,7 @@ def levelCreator():
 	for line in file:
 		vertCount = vertCount + 1
 		rowSquares = []
+		mapRows = [] ##############################################
 		workingTile = line
 		workingTile = [x for x in workingTile.split(' ')]
 		horizCount = -1
@@ -172,6 +173,8 @@ def levelCreator():
 				workingSquare.terrain = "water"
 				workingSquare.coordinates = [horizCount,vertCount]
 				rowSquares.append(workingSquare)
-			print(workingSquare.coordinates)
+			mapRows = mapRows.append(rowSquares)##############################################
+	print(mapRows)
+
 
 	file.close()
