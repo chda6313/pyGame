@@ -172,10 +172,6 @@ def levelCreator():
 				workingSquare.terrain = "water"
 				workingSquare.coordinates = [horizCount,vertCount]
 				rowSquares.append(workingSquare)
-
-		for x in rowSquares:
-			print(workingSquare.terrain)##########Something isn't right... And I sure as hell don't know what
-
-	print(len(rowSquares))########Why is this only 16?
+			print(workingSquare.coordinates)
 
 	file.close()
