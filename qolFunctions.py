@@ -107,7 +107,7 @@ def femaleNameGen():
 			name = re.sub('2', '', name)
 	return name.title()
 
-def levelCreator(mapToOpen):
+def levelCreator(mapToOpen):####Run this like so: qolFunctions.levelCreator("thisisthemap.txt")
 	file = open(mapToOpen, "r")
 	vertCount = -1
 	mapRows = []
