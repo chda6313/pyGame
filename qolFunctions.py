@@ -108,9 +108,10 @@ def femaleNameGen():
 		for grabbedName in soup.findAll('a', {'class': 'plain'}):
 			name = grabbedName.get('href')
 			#shit keeps popping up from weird characters, this is to iron it out:
+			for x in range(0,9):
+				name = re.sub('x', '', name)
 			name = re.sub('/name/', '', name)
-			name = re.sub('-2', '', name)
-			name = re.sub('-1', '', name)
+			name = re.sub('-', '', name)
 
 	return name.title()
 
@@ -142,40 +143,39 @@ def levelCreator():
 	vertCount = -1
 	for line in file:
 		vertCount = vertCount + 1
-		row = []
 		rowSquares = []
 		workingTile = line
 		workingTile = [x for x in workingTile.split(' ')]
 		horizCount = -1
 		for x in workingTile:
+			horizCount = horizCount + 1
 			if x == '0':
-				row.append('     ')
 				workingSquare = classes.mapSquare()
 				workingSquare.terrain = "void"
 				workingSquare.coordinates = [horizCount,vertCount]
 				rowSquares.append(workingSquare)
 			if x == '1':
-				row.append('rocks')
 				rowSquares.append(classes.mapSquare())
 				workingSquare = classes.mapSquare()
 				workingSquare.terrain = "rocks"
-				workingSquare.coordinates = [horizCount, vertCount]
+				workingSquare.coordinates = [horizCount,vertCount]
 				rowSquares.append(workingSquare)
 			if x == '2':
-				row.append('trees')
 				rowSquares.append(classes.mapSquare())
 				workingSquare = classes.mapSquare()
 				workingSquare.terrain = "trees"
-				workingSquare.coordinates = [horizCount, vertCount]
+				workingSquare.coordinates = [horizCount,vertCount]
 				rowSquares.append(workingSquare)
 			if x == '3':
-				row.append('water')
 				rowSquares.append(classes.mapSquare())
 				workingSquare = classes.mapSquare()
 				workingSquare.terrain = "water"
-				workingSquare.coordinates = [horizCount, vertCount]
+				workingSquare.coordinates = [horizCount,vertCount]
 				rowSquares.append(workingSquare)
+
 		for x in rowSquares:
-			print(workingSquare.coordinates)
+			print(workingSquare.terrain)##########Something isn't right... And I sure as hell don't know what
+
+	print(len(rowSquares))########Why is this only 16?
 
 	file.close()
