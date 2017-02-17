@@ -108,35 +108,12 @@ def femaleNameGen():
 		for grabbedName in soup.findAll('a', {'class': 'plain'}):
 			name = grabbedName.get('href')
 			#shit keeps popping up from weird characters, this is to iron it out:
-			for x in range(0,9):
-				name = re.sub('x', '', name)
+			name = re.sub('1', '', name)
 			name = re.sub('/name/', '', name)
 			name = re.sub('-', '', name)
+			name = re.sub('2', '', name)
 
 	return name.title()
-
-######Nathan tried.
-#def levelCreator():
-	#file = open("Level1.txt", "r")
-	#squareAtts = []
-	#tileList = []
-	#count = 0
-	#for line in file:
-		#count = count + 1
-		#workingTile = line
-		#workingTile = [x for x in workingTile.split(' ')]
-		#for x in workingTile:
-			#tileObject = classes.mapSquare()
-			#tileObject.number = x
-			#tileObject.terrain = x
-			#tileObject.items = x
-			#tileObject.altitude = x
-			#tileObject.entities = x
-			#tileObject.passable = x
-			#tileObject.lineBreak = x
-		#tileList.append(tileObject)
-		#print(workingTile)
-	#print(tileList)
 
 def levelCreator():
 	file = open("Level1.txt", "r")
@@ -144,7 +121,7 @@ def levelCreator():
 	for line in file:
 		vertCount = vertCount + 1
 		rowSquares = []
-		mapRows = [] ##############################################
+		mapRows = []
 		workingTile = line
 		workingTile = [x for x in workingTile.split(' ')]
 		horizCount = -1
@@ -173,8 +150,9 @@ def levelCreator():
 				workingSquare.terrain = "water"
 				workingSquare.coordinates = [horizCount,vertCount]
 				rowSquares.append(workingSquare)
-			mapRows = mapRows.append(rowSquares)##############################################
-	print(mapRows)
+			mapRows.append(rowSquares)
+	for lists in mapRows:
+		print(lists) ############Why does this print 9 lists of 16 instead of 6 lists of 8?
 
 
 	file.close()
