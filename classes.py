@@ -33,9 +33,9 @@ class levelMap():
 
 class mapSquare():
 	def __init__(self):
-		self.terrain = 1
+		self.coordinates = [0,0]
+		self.terrain = "void"
 		self.items = 0
-		self.altitude = 0
 		self.entities = 0
 		self.passable = 1
 

@@ -139,19 +139,43 @@ def femaleNameGen():
 
 def levelCreator():
 	file = open("Level1.txt", "r")
+	vertCount = -1
 	for line in file:
+		vertCount = vertCount + 1
 		row = []
+		rowSquares = []
 		workingTile = line
 		workingTile = [x for x in workingTile.split(' ')]
+		horizCount = -1
 		for x in workingTile:
 			if x == '0':
-				row.append('_____')
+				row.append('     ')
+				workingSquare = classes.mapSquare()
+				workingSquare.terrain = "void"
+				workingSquare.coordinates = [horizCount,vertCount]
+				rowSquares.append(workingSquare)
 			if x == '1':
 				row.append('rocks')
+				rowSquares.append(classes.mapSquare())
+				workingSquare = classes.mapSquare()
+				workingSquare.terrain = "rocks"
+				workingSquare.coordinates = [horizCount, vertCount]
+				rowSquares.append(workingSquare)
 			if x == '2':
 				row.append('trees')
+				rowSquares.append(classes.mapSquare())
+				workingSquare = classes.mapSquare()
+				workingSquare.terrain = "trees"
+				workingSquare.coordinates = [horizCount, vertCount]
+				rowSquares.append(workingSquare)
 			if x == '3':
 				row.append('water')
-		print(row)
+				rowSquares.append(classes.mapSquare())
+				workingSquare = classes.mapSquare()
+				workingSquare.terrain = "water"
+				workingSquare.coordinates = [horizCount, vertCount]
+				rowSquares.append(workingSquare)
+		for x in rowSquares:
+			print(workingSquare.coordinates)
 
 	file.close()
