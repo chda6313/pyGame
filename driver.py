@@ -4,7 +4,8 @@ import os, sys, random, classes, qolFunctions
 def __main__():
 
 
-##################################################HEY CHARLIE using money instead of fuel breaks the save/load function for some reason
+##################################################HEY CHARLIE using money instead of fuel breaks the load function for some reason
+##################################################Works with fuel but not money. Weird.
 
 #make a ship
 	PlayerShip = classes.ship()
