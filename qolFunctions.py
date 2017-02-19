@@ -144,7 +144,6 @@ def levelCreator(mapToOpen):####Run this like so: qolFunctions.levelCreator("thi
 	file.close()
 	return mapRows
 
-#ToDo Still need to make this normalize the length of printed attributes
 def mapDump(map,attribute): ##### Run this like so: mapDump(whateveryoumadelevelCreatormake,"attributeyouwantdumped")
 	count = -1
 	for lists in map:
@@ -157,5 +156,15 @@ def mapDump(map,attribute): ##### Run this like so: mapDump(whateveryoumadelevel
 		print(row)
 
 #ToDo Make this all update mapSquares
-def moveCrewMate(mate,coords):
-	mate.coordinates = coords
+def moveCrewMate(mate,coords,map):
+	mate.location = coords
+	for lists in map:
+		for squares in lists:
+			if squares.coordinates[0] == mate.location[0]:
+				print("Half-success")
+				if squares.coordinates[1] == mate.location[1]:
+					squares.entities.append(mate)
+					print("success") #############################WHY
+			print(squares.coordinates)
+	print(mate.location)
+
