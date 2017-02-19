@@ -33,7 +33,7 @@ class levelMap():
 
 class mapSquare():
 	def __init__(self):
-		self.coordinates = [0, 0]
+		self.coordinates = [0,0]
 		self.terrain = "void"
 		self.items = 0
 		self.entities = []
@@ -47,7 +47,7 @@ class crewMate():
 		self.health = 5
 		self.armor = 1
 		self.energy = 3
-		self.location = [0, 0]
+		self.location = [0,0]
 		self.square = mapSquare
 
 class enemy():
@@ -57,7 +57,7 @@ class enemy():
 		self.health = 5
 		self.armor = 1
 		self.energy = 3
-		self.location = [0, 0]
+		self.location = [0,0]
 		self.square = mapSquare
 
 

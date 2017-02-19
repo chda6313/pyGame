@@ -34,11 +34,12 @@ def __main__():
 
 #Make crew member
 	Nathan = classes.crewMate()
+	Charlie = classes.enemy()
 #Move him
-	qolFunctions.moveCrewMate(Nathan,"[3, 4]",map)
+	qolFunctions.moveEntity(Nathan,[3,4],map)
+	qolFunctions.moveEntity(Charlie,[3,3],map)
 
 	qolFunctions.mapDump(map,"entities")
 
-	print("^^^^^^^^ This is the mapDump for entities in our map")
 
 __main__()
