@@ -4,9 +4,6 @@ import os, sys, random, classes, qolFunctions
 def __main__():
 
 
-##################################################HEY CHARLIE using money instead of fuel breaks the load function for some reason
-##################################################Works with fuel but not money. Weird.
-
 #make a ship
 	PlayerShip = classes.ship()
 	PlayerShip.name = "Serenity"
@@ -19,7 +16,7 @@ def __main__():
 #load save file
 	PlayerShip = qolFunctions.loadGame("Serenity_Save.txt")
 #did it work?
-	print(PlayerShip.fuel)
+	print(PlayerShip.money)
 
 
 #This will create a random male name

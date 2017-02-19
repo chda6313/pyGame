@@ -1,0 +1,48 @@
+task 	difficulty 	Person
+
+
+
+create QOL function to output current map to screen to test further code ( mapDump() )
+	2		
+
+
+create crewMate() location attribute (self.location)
+	0		
+
+
+Create crewMate() move function. (inputs are target coords, updates crewMate coords)
+	2		
+
+
+create enemy class, similar to crewMate
+	2		
+
+
+create enemy and players on mapDump()
+	4	
+
+
+Start Graphics
+	7		Charlie
+
+
+
+
+
+Other shit-----------
+
+create merc for hire database
+
+create weapon database
+
+design loot system
+
+design ship upgrade system
+
+design shop
+
+
+
+
+
+make 10x10 maps, doors on each side. were gonna do the procedural thing.
