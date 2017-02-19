@@ -36,8 +36,9 @@ def __main__():
 	Nathan = classes.crewMate()
 	Charlie = classes.enemy()
 #Move him
-	qolFunctions.moveEntity(Nathan,[3,4],map)
+	qolFunctions.moveEntity(Nathan,[3,2],map)
 	qolFunctions.moveEntity(Charlie,[3,3],map)
+	qolFunctions.moveEntity(Nathan,[3,6],map)
 
 	qolFunctions.mapDump(map,"entities")
 

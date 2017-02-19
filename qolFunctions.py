@@ -160,11 +160,16 @@ def moveEntity(entity,coords,map):
 	entity.location = coords
 	for lists in map:
 		for squares in lists:
-			if squares.coordinates[0] == entity.location[0]:
-				if squares.coordinates[1] == entity.location[1]:
+			if entity in squares.entities: #########################This is the line in question
+				#Here we would remove it from that square
+				if squares.coordinates[0] == entity.location[0] and squares.coordinates[1] == entity.location[1]:
 					if squares.passable == 1:
-						squares.entities.append(entity)
-						entity.square = squares
+						distance = 1 #########################Placeholder
+						if distance <= entity.moveSpeed:
+							squares.entities.append(entity)
+							entity.square = squares
 					else:
 						print("That is not a passable location")
+
+
 
