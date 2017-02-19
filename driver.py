@@ -4,18 +4,18 @@ import os, sys, random, classes, qolFunctions
 def __main__():
 
 #make a ship
-	PlayerShip = classes.ship()
-	PlayerShip.name = "Serenity"
+	#PlayerShip = classes.ship()
+	#PlayerShip.name = "Serenity"
 #give it attributes
-	PlayerShip.money = 100
+	#PlayerShip.money = 100
 #save game
-	qolFunctions.saveGame(PlayerShip)
+	#qolFunctions.saveGame(PlayerShip)
 #play game
-	PlayerShip.money = 0
+	#PlayerShip.money = 0
 #load save file
-	PlayerShip = qolFunctions.loadGame("Serenity_Save.txt")
+	#PlayerShip = qolFunctions.loadGame("Serenity_Save.txt")
 #did it work?
-	print(PlayerShip.money)
+	#print(PlayerShip.money)
 
 #This will create a random male name
 	#name = qolFunctions.maleNameGen()
@@ -28,7 +28,9 @@ def __main__():
 	#print(name,"\n")
 
 #Playing with levelCreator
-	#qolFunctions.levelCreator("Level1.txt")
+	map = qolFunctions.levelCreator("Level1.txt")
+#Trying to dump map
+	qolFunctions.mapDump(map,"passable")
 
 
 

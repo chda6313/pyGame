@@ -128,7 +128,7 @@ def levelCreator(mapToOpen):####Run this like so: qolFunctions.levelCreator("thi
 				workingSquare = classes.mapSquare()
 				workingSquare.terrain = "wall"
 				workingSquare.coordinates = [horizCount,vertCount]
-				workingSquare.passable = ()
+				workingSquare.passable = (0)
 				rowSquares.append(workingSquare)
 			if x == '2':
 				workingSquare = classes.mapSquare()
@@ -142,3 +142,15 @@ def levelCreator(mapToOpen):####Run this like so: qolFunctions.levelCreator("thi
 				rowSquares.append(workingSquare)
 		mapRows.append(rowSquares)
 	file.close()
+	return mapRows
+
+#ToDo Still need to make this normalize the length of printed attributes
+def mapDump(map,attribute): ##### Run this like so: mapDump(whateveryoumadelevelCreatormake,"attributeyouwantdumped")
+	count = -1
+	for lists in map:
+		row = []
+		count = count + 1
+		for squares in lists:
+			if squares.coordinates[1] == count:
+				row.append(getattr(squares, attribute))
+		print(row)
