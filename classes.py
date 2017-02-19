@@ -47,6 +47,7 @@ class crewMate():
 		self.health = 5
 		self.armor = 1
 		self.energy = 3
+		self.location = [0,0]
 
 
 

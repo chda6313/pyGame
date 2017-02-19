@@ -1,15 +1,6 @@
 task 	difficulty 	Person
 
 
-
-create QOL function to output current map to screen to test further code ( mapDump() )
-	2		
-
-
-create crewMate() location attribute (self.location)
-	0		
-
-
 Create crewMate() move function. (inputs are target coords, updates crewMate coords)
 	2		
 

@@ -30,7 +30,14 @@ def __main__():
 #Playing with levelCreator
 	map = qolFunctions.levelCreator("Level1.txt")
 #Trying to dump map
-	qolFunctions.mapDump(map,"passable")
+	qolFunctions.mapDump(map,"coordinates")
+
+#Make crew member
+	Nathan = classes.crewMate()
+#Move him
+	qolFunctions.moveCrewMate(Nathan,"[3,4]")
+#Where is he?
+	print(Nathan.coordinates)
 
 
 

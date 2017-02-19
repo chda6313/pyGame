@@ -148,10 +148,14 @@ def levelCreator(mapToOpen):####Run this like so: qolFunctions.levelCreator("thi
 def mapDump(map,attribute): ##### Run this like so: mapDump(whateveryoumadelevelCreatormake,"attributeyouwantdumped")
 	count = -1
 	for lists in map:
-		row = ' '######################
+		row = ' '
 		count = count + 1
 		for squares in lists:
 			if squares.coordinates[1] == count:
-				row += str(getattr(squares, attribute))#####################
-				row += '\t'#############################
+				row += str(getattr(squares, attribute))
+				row += '\t'
 		print(row)
+
+#ToDo Make this all update mapSquares
+def moveCrewMate(mate,coords):
+	mate.coordinates = coords
