@@ -1,39 +1,34 @@
 task 	difficulty 	Person
 
-
-Create crewMate() move function. (inputs are target coords, updates crewMate coords)
-	2		
-
-
-create enemy class, similar to crewMate
-	2		
+Create a player png (64x64 pix) and make it display on the graphics
+	2	Nathan
+	--perhaps do the same if there is supposed to be an item in that square
+	--perhaps do the same for images of terrain, instead of colored squares
 
 
-create enemy and players on mapDump()
-	4	
+Implement a menu that would let you toggle between showing the map and something else (like "shop")
+	--should just be an if in while loop on GameGraphics
+	2	
 
 
-Start Graphics
-	7		Charlie
+Implement clicking to select squares
+	4		Charlie
 
+create merc for hire text file
+-Name	Weapon	HP	Speed
+	1
 
-
-
-
-Other shit-----------
-
-create merc for hire database
 
 create weapon database
+-Name	Damaga	Range
+	1
+
+
+----------Other Shit----------
 
 design loot system
-
 design ship upgrade system
-
 design shop
 
 
-
-
-
-make 10x10 maps, doors on each side. were gonna do the procedural thing.
+make 7x7 maps, doors on each side. were gonna do the procedural thing like isaac?
