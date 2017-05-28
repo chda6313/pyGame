@@ -61,8 +61,8 @@ def checkEvents(mouseX, mouseY):
                 message_to_screen("UP----ARROW", white)
             if event.key == pygame.K_DOWN:#left arrow key
                 message_to_screen("DOWN--ARROW", white)
-                message_to_screen("RIGHT-ARROW", white)
             if event.key == pygame.K_RIGHT:#left arrow key
+                message_to_screen("RIGHT-ARROW", white)
             if event.key == pygame.K_q:
                 pygame.quit()#closes window
 
