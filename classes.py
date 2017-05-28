@@ -36,7 +36,7 @@ class mapSquare():
 		self.coordinates = [0,0]
 		self.terrain = "void"
 		self.items = 0
-		self.entities = []
+		self.entity = " "
 		self.passable = 1
 
 class crewMate():

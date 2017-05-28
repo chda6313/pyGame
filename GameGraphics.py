@@ -92,6 +92,11 @@ def drawMap(mymap):
 
             gameDisplay.fill(rectColor, rect=[tile.coordinates[0]*65,tile.coordinates[1]*65,64,64])
 
+            if (tile.entity != " "):
+                print("tile ",tile.coordinates," contains ", tile.entity)
+                ###TODO --- Make this display an image given by the name of the entity eg: NAME.png
+                #this might help
+                #  https://www.youtube.com/watch?v=P4HGZthhkpg&list=PL6gx4Cwl9DGAjkwJocj7vlc_mFU-4wXJq&index=29
 
 
 
@@ -101,8 +106,13 @@ while not gameExit:
 
     gameDisplay.fill(black)#essentially wipes bg
 
+
+    #TODO -- menu, choose to display a menu or the game, drawMap or ?drawStore? or something
     drawMap(map)
+
+
     x,y = checkEvents(x,y)
+    #TODO -- Use x,y to check for mouse selecting something on the screen, like a square of the map, or some option
 
     #next frame, this should end the loop
     pygame.display.update()
