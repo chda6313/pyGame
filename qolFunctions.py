@@ -181,7 +181,7 @@ def imageSliceNDice(mapImage):
 	mapImage = Image.open(mapImage)
 	#Need to make a better for loop here to have it run through a whole image of any size, sounds like a task for another day. Might be easier to automatically set the range based on resolution
 	#Thought this would be a fun tool for playing with the map
-	for x in range(0,6):
-		for y in range(0,6):
+	for x in range(7):
+		for y in range(7):
 			mapImageSlice = mapImage.crop(((x * 100),(y * 100),(x * 100 + 100),(y * 100 + 100)))
 			mapImageSlice.save("slice" + str(x) + "," + str(y) + (".jpg"))
