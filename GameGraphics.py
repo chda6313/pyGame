@@ -31,9 +31,12 @@ clock = pygame.time.Clock()
 #game loop
 gameExit = False
 
-while not gameExit:
+map = qolFunctions.levelCreator("Level1.txt")
 
-    gameDisplay.fill(black)#essentially wipes bg
+
+
+
+def checkEvents(mouseX, mouseY):
     rectColor = (255,255,255)
 
     #get events, mouse movement, clicks, keyboard etc
@@ -58,8 +61,10 @@ while not gameExit:
                 message_to_screen("UP----ARROW", white)
             if event.key == pygame.K_DOWN:#left arrow key
                 message_to_screen("DOWN--ARROW", white)
-            if event.key == pygame.K_RIGHT:#left arrow key
                 message_to_screen("RIGHT-ARROW", white)
+            if event.key == pygame.K_RIGHT:#left arrow key
+            if event.key == pygame.K_q:
+                pygame.quit()#closes window
 
     if mouseButtons[0]:
         rectColor = (255,0,0)
@@ -67,12 +72,13 @@ while not gameExit:
         rectColor = (0,255,0)
     if mouseButtons[2]:
         rectColor = (0,0,255)
+
     gameDisplay.fill(rectColor, rect=[mouseX-10,mouseY-10,20,20])# color, rect = [x,y,width height]
 
+    return (mouseX,mouseY)
 
-
-
-    map = qolFunctions.levelCreator("Level1.txt")
+def drawMap():
+    rectColor = (255,255,255)
     for row in map:
         for tile in row:
             if tile.terrain == "path":
@@ -84,11 +90,19 @@ while not gameExit:
             if tile.terrain == "spawn":
                 rectColor = green
 
-            gameDisplay.fill(rectColor, rect=[tile.coordinates[0]*50,tile.coordinates[1]*50,40,40])
+            gameDisplay.fill(rectColor, rect=[tile.coordinates[0]*65,tile.coordinates[1]*65,64,64])
 
 
 
 
+x=0
+y=0
+while not gameExit:
+
+    gameDisplay.fill(black)#essentially wipes bg
+
+    drawMap()
+    x,y = checkEvents(x,y)
 
     #next frame, this should end the loop
     pygame.display.update()
