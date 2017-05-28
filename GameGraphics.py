@@ -43,7 +43,7 @@ def checkEvents(mouseX, mouseY):
     for event in pygame.event.get():
         #print(event)
         if event.type == pygame.QUIT:
-            gameExit = True
+            pygame.quit()
         if event.type == pygame.MOUSEMOTION:
             (mouseX, mouseY) = event.pos
             #print(mouseX,mouseY)
@@ -77,9 +77,9 @@ def checkEvents(mouseX, mouseY):
 
     return (mouseX,mouseY)
 
-def drawMap():
+def drawMap(mymap):
     rectColor = (255,255,255)
-    for row in map:
+    for row in mymap:
         for tile in row:
             if tile.terrain == "path":
                 rectColor = (200,200,0)
@@ -101,7 +101,7 @@ while not gameExit:
 
     gameDisplay.fill(black)#essentially wipes bg
 
-    drawMap()
+    drawMap(map)
     x,y = checkEvents(x,y)
 
     #next frame, this should end the loop
