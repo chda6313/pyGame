@@ -3,6 +3,10 @@ import os, sys, random, classes, qolFunctions
 
 def __main__():
 
+	qolFunctions.imageSliceNDice("valhalla.png")
+
+
+
 #make a ship
 	#PlayerShip = classes.ship()
 	#PlayerShip.name = "Serenity"
@@ -28,19 +32,18 @@ def __main__():
 	#print(name,"\n")
 
 #Playing with levelCreator
-	map = qolFunctions.levelCreator("Level1.txt")
+	#map = qolFunctions.levelCreator("Level1.txt")
 #Trying to dump map
 	#qolFunctions.mapDump(map,"coordinates")
 
 #Make crew member
-	Nathan = classes.crewMate()
-	Charlie = classes.enemy()
+	#Nathan = classes.crewMate()
+	#Charlie = classes.enemy()
 #Move him
-	qolFunctions.moveEntity(Nathan,[3,2],map)
-	qolFunctions.moveEntity(Charlie,[3,3],map)
-	qolFunctions.moveEntity(Nathan,[3,6],map)
+	#qolFunctions.moveEntity(Nathan,[3,2],map)
+	#qolFunctions.moveEntity(Charlie,[3,3],map)
+	#qolFunctions.moveEntity(Nathan,[3,6],map)
 
-	qolFunctions.mapDump(map,"entities")
-
+	#qolFunctions.mapDump(map,"entities")
 
 __main__()
