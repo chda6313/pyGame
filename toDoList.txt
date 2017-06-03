@@ -20,7 +20,7 @@ create merc for hire text file
 
 
 create weapon database
--Name	Damaga	Range
+-Name	Damage	Range
 	1
 
 
