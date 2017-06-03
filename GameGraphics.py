@@ -77,6 +77,10 @@ def checkEvents(mouseX, mouseY):
 
     return (mouseX,mouseY)
 
+def loadImage(image):  #######Use this like so: loadImage(picture.png)
+    img = pygame.image.load(str(image))
+    return img
+
 def drawMap(mymap):
     rectColor = (255,255,255)
     for row in mymap:
